@@ -1,1 +1,54 @@
-<h1>Example App: aaaa</h1>
+
+
+
+{{!-- tittle div --}}
+
+<div class="row">
+<div class="container black white-text card-panel col l6">
+
+  <h3 class="center">Welcome to news Scrape!</h3>
+</div>
+{{!-- btn pannel --}}
+<div class="container black card-panel col l6">
+<h3 class="center orange-text text-darken-4">click here scrape news</h3>
+
+
+</div>
+</div>
+
+{{!-- news render div --}}
+<div class="row  black white-text card-panel ">
+
+  <h2>renders recent news</h2>
+
+  {{#each articles}}
+
+   
+        <div class="col s12 m4 l6">
+          <div class="card black">
+            <div class="card-image">
+              <img src={{this.image}}>
+            </div>
+            <div class="card-content white-text">
+              <h5 class="card-title">{{this.topic}}</h5>
+             
+              <p>{{this.time}}</p>
+              <p>{{this.title}}</p>
+            </div>
+            <div class="card-action">
+              <a href="{{this.link}}">Read Article</a>
+            </div>
+          </div>
+        </div>
+ 
+  
+    
+{{/each}}
+
+</div>
+
+
+
+
+
+
