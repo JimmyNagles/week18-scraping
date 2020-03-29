@@ -19,19 +19,19 @@
 {{!-- news render div --}}
 <div class="row  black white-text card-panel ">
 
-  <h2>renders recent news</h2>
+  <h2>Recent News</h2>
 
   {{#each articles}}
 
    
-        <div class="col s12 m4 l6">
+        <div class="col s12 m4 l4">
           <div class="card black">
-            <div class="card-image">
+            <div class="card-image responsive-img">
               <img src={{this.image}}>
+              <span class="card-title black white-text">{{this.topic}}</span>
+             
             </div>
             <div class="card-content white-text">
-              <h5 class="card-title">{{this.topic}}</h5>
-             
               <p>{{this.time}}</p>
               <p>{{this.title}}</p>
             </div>
