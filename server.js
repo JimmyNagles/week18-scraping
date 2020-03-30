@@ -2,7 +2,7 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var routes = require("./routes/routes")
-var PORT = 3000;
+var PORT =  process.env.PORT || 3000;
 var exphbs  = require('express-handlebars');
 var app = express();
  
@@ -24,7 +24,7 @@ app.set('view engine', 'handlebars');
 
 
 // Connect to the Mongo DB
-var MONGODB_URI =process.env.MONGODB_URI || "mongodb://localhost/week18-scraping";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/week18-scraping";
 // Connect to the Mongo DB
 
 
