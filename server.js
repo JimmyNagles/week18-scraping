@@ -24,7 +24,7 @@ app.set('view engine', 'handlebars');
 
 
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/week18-scraping";
+var MONGODB_URI = process.env.MONGODB_URI ;
 // Connect to the Mongo DB
 
 
