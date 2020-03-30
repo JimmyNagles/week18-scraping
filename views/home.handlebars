@@ -19,17 +19,16 @@
 {{!-- news render div --}}
 <div class="row  black white-text card-panel ">
 
-  <h2>Recent News</h2>
+  <h2 class=" center orange-text text-darken-4">Recent News</h2>
 
-  {{#each articles}}
+      {{#each articles}}
 
-   
-        <div class="col s12 m4 l4">
-          <div class="card black">
+        <div class="container col s12 m4 l4">
+          <div  class="card black">
             <div class="card-image responsive-img">
               <img src={{this.image}}>
               <span class="card-title black white-text">{{this.topic}}</span>
-             
+
             </div>
             <div class="card-content white-text">
               <p>{{this.time}}</p>
@@ -41,9 +40,9 @@
           </div>
         </div>
  
-  
+
     
-{{/each}}
+      {{/each}}
 
 </div>
 

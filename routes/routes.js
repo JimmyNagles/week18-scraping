@@ -43,7 +43,7 @@ router.get('/', function (req, res) {
                     db.Article.create(resultsArray)
                     .then(function(dbArticle) {
                       // View the added result in the console
-                      console.log(dbArticle);
+                      console.log("added new article",dbArticle);
                     })
                   
 
@@ -64,8 +64,6 @@ router.get('/', function (req, res) {
 
             });
 
-
-// res.render('home',{articles:dbArticle} )
 
 
 
