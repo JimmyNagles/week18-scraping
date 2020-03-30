@@ -22,10 +22,10 @@ app.use(routes)
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-var MONGODB_URI =process.env.MONGODB_URI || "mongodb://localhost/week18-scraping";
+
 // Connect to the Mongo DB
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/week18-scraping", { useNewUrlParser: true });
 // Require all models
 var db = mongoose.connection;
 
