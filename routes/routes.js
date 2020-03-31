@@ -6,7 +6,7 @@ const db = require("../models");
 
 
 router.get('/scrape', function (req, res) {
-
+  console.log('-------------------------------------------------')
         var resultsArray=[];
     
     
