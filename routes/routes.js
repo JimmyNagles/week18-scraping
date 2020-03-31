@@ -1,13 +1,13 @@
 const router = require("express").Router();
-const scrape = require("../script/scrape");
+
 var axios = require("axios");
 var cheerio = require("cheerio");
 const db = require("../models");
 
 
-router.get('/', function (req, res) {
+router.get('/scrape', function (req, res) {
 
-    var resultsArray=[];
+        var resultsArray=[];
     
     
             axios.get("https://www.miamiherald.com/news/").then(function (response) {
@@ -51,7 +51,7 @@ router.get('/', function (req, res) {
                     db.Article.find({})
                     .then(function(dbArticle) {
                       // If we were able to successfully find Articles, send them back to the client
-                      console.log(dbArticle)
+                      console.log("dbbb articles",dbArticle)
                       res.render('home',{articles: dbArticle});
                     //   res.json(dbArticle);
                     })
@@ -71,5 +71,15 @@ router.get('/', function (req, res) {
  });
 
 
+ router.get('/', function (req, res) {
+  
+  db.Article.find({})
+  .then(function(dbArticle) {
+    // If we were able to successfully find Articles, send them back to the client
+    console.log("dbbb articles",dbArticle)
+    res.render('home',{articles: dbArticle});
+  //   res.json(dbArticle);
+  })
+});
 
   module.exports = router;

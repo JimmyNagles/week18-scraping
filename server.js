@@ -17,12 +17,12 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-app.use(routes)
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 
+app.use(routes)
 // Connect to the Mongo DB
 var MONGODB_URI =process.env.MONGODB_URI || "mongodb://localhost/week18-scraping";
 // Connect to the Mongo DB
